@@ -23,7 +23,7 @@
         "twig/twig": "^1.36",
         "willdurand/geocoder": "^3.3",
         "satooshi/php-coveralls": "^2.0"
-    }
+    },
     "autoload": {
         "psr-4": { "Ivory\\GoogleMapBundle\\": "" }
     },
