@@ -41,18 +41,15 @@
 
     <services>
         <!-- Map type control service -->
-        <service
-            id="ivory_google_map.map_type_control"
-            class="%ivory_google_map.map_type_control.class%"
-            factory-service="ivory_google_map.map_type_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.bound" class="%ivory_google_map.bound.class%">
+            <factory service="ivory_google_map.bound.builder" method="build" />
+        </service>
+		
+		<service id="ivory_google_map.map_type_control" class="%ivory_google_map.map_type_control.class%">
+            <factory service="ivory_google_map.map_type_control.builder" method="build" />
+        </service>
 
-        <service
-            id="ivory_google_map.map_type_control.builder"
-            class="%ivory_google_map.map_type_control.builder.class%"
-        >
+        <service id="ivory_google_map.map_type_control.builder" class="%ivory_google_map.map_type_control.builder.class%">
             <argument>%ivory_google_map.map_type_control.class%</argument>
         </service>
 
@@ -67,18 +64,11 @@
         </service>
 
         <!-- Overview map control service -->
-        <service
-            id="ivory_google_map.overview_map_control"
-            class="%ivory_google_map.overview_map_control.class%"
-            factory-service="ivory_google_map.overview_map_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.overview_map_control" class="%ivory_google_map.overview_map_control.class%">
+            <factory service="ivory_google_map.overview_map_control.builder" method="build" />
+        </service>
 
-        <service
-            id="ivory_google_map.overview_map_control.builder"
-            class="%ivory_google_map.overview_map_control.builder.class%"
-        >
+        <service id="ivory_google_map.overview_map_control.builder" class="%ivory_google_map.overview_map_control.builder.class%">
             <argument>%ivory_google_map.overview_map_control.class%</argument>
         </service>
 
@@ -89,111 +79,68 @@
         />
 
         <!-- Pan control service -->
-        <service
-            id="ivory_google_map.pan_control"
-            class="%ivory_google_map.pan_control.class%"
-            factory-service="ivory_google_map.pan_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.pan_control" class="%ivory_google_map.pan_control.class%">
+            <factory service="ivory_google_map.pan_control.builder" method="build" />
+        </service>
 
         <service id="ivory_google_map.pan_control.builder" class="%ivory_google_map.pan_control.builder.class%">
             <argument>%ivory_google_map.pan_control.class%</argument>
         </service>
 
-        <service
-            id="ivory_google_map.helper.pan_control"
-            class="%ivory_google_map.pan_control.helper.class%"
-            public="false"
-        >
+        <service id="ivory_google_map.helper.pan_control" class="%ivory_google_map.pan_control.helper.class%" public="false">
             <argument type="service" id="ivory_google_map.helper.control_position" />
         </service>
 
         <!-- Rotate control service -->
-        <service
-            id="ivory_google_map.rotate_control"
-            class="%ivory_google_map.rotate_control.class%"
-            factory-service="ivory_google_map.rotate_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.rotate_control" class="%ivory_google_map.rotate_control.class%">
+            <factory service="ivory_google_map.rotate_control.builder" method="build" />
+        </service>
 
         <service id="ivory_google_map.rotate_control.builder" class="%ivory_google_map.rotate_control.builder.class%">
             <argument>%ivory_google_map.rotate_control.class%</argument>
         </service>
 
-        <service
-            id="ivory_google_map.helper.rotate_control"
-            class="%ivory_google_map.rotate_control.helper.class%"
-            public="false"
-        >
+        <service id="ivory_google_map.helper.rotate_control" class="%ivory_google_map.rotate_control.helper.class%" public="false">
             <argument type="service" id="ivory_google_map.helper.control_position" />
         </service>
 
         <!-- Scale control service -->
-        <service
-            id="ivory_google_map.scale_control"
-            class="%ivory_google_map.scale_control.class%"
-            factory-service="ivory_google_map.scale_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.scale_control" class="%ivory_google_map.scale_control.class%">
+            <factory service="ivory_google_map.scale_control.builder" method="build" />
+        </service>
 
         <service id="ivory_google_map.scale_control.builder" class="%ivory_google_map.scale_control.builder.class%">
             <argument>%ivory_google_map.scale_control.class%</argument>
         </service>
 
-        <service
-            id="ivory_google_map.helper.scale_control"
-            class="%ivory_google_map.scale_control.helper.class%"
-            public="false"
-        >
+        <service id="ivory_google_map.helper.scale_control" class="%ivory_google_map.scale_control.helper.class%" public="false">
             <argument type="service" id="ivory_google_map.helper.control_position" />
             <argument type="service" id="ivory_google_map.helper.scale_control_style" />
         </service>
 
         <!-- Street view control service -->
-        <service
-            id="ivory_google_map.street_view_control"
-            class="%ivory_google_map.street_view_control.class%"
-            factory-service="ivory_google_map.street_view_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+		<service id="ivory_google_map.street_view_control" class="%ivory_google_map.street_view_control.class%">
+            <factory service="ivory_google_map.street_view_control.builder" method="build" />
+        </service>
 
-        <service
-            id="ivory_google_map.street_view_control.builder"
-            class="%ivory_google_map.street_view_control.builder.class%"
-        >
+        <service id="ivory_google_map.street_view_control.builder" class="%ivory_google_map.street_view_control.builder.class%">
             <argument>%ivory_google_map.street_view_control.class%</argument>
         </service>
 
-        <service
-            id="ivory_google_map.helper.street_view_control"
-            class="%ivory_google_map.street_view_control.helper.class%"
-            public="false"
-        >
+        <service id="ivory_google_map.helper.street_view_control" class="%ivory_google_map.street_view_control.helper.class%" public="false">
             <argument type="service" id="ivory_google_map.helper.control_position" />
         </service>
 
         <!-- Zoom control service -->
-        <service
-            id="ivory_google_map.zoom_control"
-            class="%ivory_google_map.zoom_control.class%"
-            factory-service="ivory_google_map.zoom_control.builder"
-            factory-method="build"
-            scope="prototype"
-        />
+        <service id="ivory_google_map.zoom_control" class="%ivory_google_map.zoom_control.class%">
+            <factory service="ivory_google_map.zoom_control.builder" method="build" />
+        </service>
 
         <service id="ivory_google_map.zoom_control.builder" class="%ivory_google_map.zoom_control.builder.class%">
             <argument>%ivory_google_map.zoom_control.class%</argument>
         </service>
 
-        <service
-            id="ivory_google_map.helper.zoom_control"
-            class="%ivory_google_map.zoom_control.helper.class%"
-            public="false"
-        >
+        <service id="ivory_google_map.helper.zoom_control" class="%ivory_google_map.zoom_control.helper.class%" public="false">
             <argument type="service" id="ivory_google_map.helper.control_position" />
             <argument type="service" id="ivory_google_map.helper.zoom_control_style" />
         </service>
