@@ -1,9 +1,7 @@
 # README
 
-[![Build Status](https://travis-ci.org/ArcaSolutions/GoogleMapBundle.svg?branch=master)](https://travis-ci.org/ArcaSolutions/GoogleMapBundle)
-
 The bundle provides an integration of the [Ivory Google Map](https://github.com/egeloen/ivory-google-map) library for
-your Symfony2 project.
+your Symfony 3.4 project.
 
 ## Documentation
 
