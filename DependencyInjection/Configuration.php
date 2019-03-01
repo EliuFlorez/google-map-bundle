@@ -27,8 +27,8 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $rootNode = $treeBuilder->root('ivory_google_map');
+		$treeBuilder = new TreeBuilder('ivory_google_map');
+        $rootNode = $treeBuilder->getRootNode();
 
         // Normalization section
         $this->addNormalizationSection($rootNode);

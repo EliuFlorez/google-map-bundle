@@ -1,8 +1,8 @@
 {
     "name": "eliuflorez/google-map-bundle",
     "type": "symfony-bundle",
-    "description": "Provides a google map integration for your Symfony 3.4 Project.",
-    "keywords": [ "google map symfony 3.4" ],
+    "description": "Provides a google map integration for your Symfony 4.2 Project.",
+    "keywords": [ "google map symfony 4.2" ],
     "license": "MIT",
     "authors": [
         {
@@ -11,18 +11,16 @@
             "role": "Developer"
         }
     ],
-    "require": {
-        "php": ">=5.5.9",
-        "symfony/framework-bundle": "^3.4",
-        "eliuflorez/google-map": "^1.0"
+	"require": {
+        "symfony/framework-bundle": "^4.2"
     },
-	"require-dev": {
-        "phpunit/phpunit": "^5.7",
-        "symfony/form": "^3.4",
-        "symfony/yaml": "^3.4",
-        "twig/twig": "^1.36",
-        "willdurand/geocoder": "^3.3",
-        "satooshi/php-coveralls": "^2.0"
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "symfony/form": "^4.2",
+        "symfony/yaml": "^4.2",
+        "twig/twig": "^2.6",
+        "willdurand/geocoder": "^4.2",
+        "satooshi/php-coveralls": "^2.1"
     },
     "autoload": {
         "psr-4": { "Ivory\\GoogleMapBundle\\": "" }
